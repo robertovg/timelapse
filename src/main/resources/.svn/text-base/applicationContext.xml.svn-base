@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-autowire="autodetect"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="  
+         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd  
+         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd  
+         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd  
+         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd  
+         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	<!-- Generic -->
+	<context:component-scan base-package="timeLapse" />
+	 
+	<aop:config>
+		<aop:advisor pointcut="(execution(* timeLapse.bussines..*.*(..)) or execution(* timeLapse.resources..*.*(..))  )))"
+			advice-ref="springLoggerInterceptor" />
+	</aop:config>
+	
+	<aop:aspectj-autoproxy/>
+	
+ 	
+	<!-- JPA -->
+	<bean
+		class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+	<tx:annotation-driven />
+	<!-- Entity Manger  -->
+	<bean
+		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+				<property name="showSql" value="false" /> <!-- Prints used SQL to stdout -->
+				<property name="databasePlatform" value="org.hibernate.dialect.MySQL5Dialect" />
+			</bean>
+		</property>
+	</bean>
+	
+	<!-- i18n -->
+	<bean id="messageSource"
+	class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>messages</value>
+				<value>exceptions</value>				
+			</list>
+		</property>
+	</bean>
+	<!-- Data Sources -->
+	<bean id="dataSource"
+		class="com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource"
+		destroy-method="close">
+		<property name="url" value="jdbc:mysql://localhost/timelapse" />
+		<property name="user" value="webuser" />
+		<property name="password" value="trivial" />
+	</bean>
+	<!-- Encargado de las transacciones -->
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+</beans>

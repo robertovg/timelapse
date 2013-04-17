@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/timelapse-pfc/!svn/ver/88/trunk/src/main/webapp/jsp/categorias
+END
+adminCategorias.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/timelapse-pfc/!svn/ver/88/trunk/src/main/webapp/jsp/categorias/adminCategorias.jsp
+END
+desvincularTareaCategoria.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/timelapse-pfc/!svn/ver/59/trunk/src/main/webapp/jsp/categorias/desvincularTareaCategoria.jsp
+END
+vincularTareaCategoria.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/timelapse-pfc/!svn/ver/59/trunk/src/main/webapp/jsp/categorias/vincularTareaCategoria.jsp
+END

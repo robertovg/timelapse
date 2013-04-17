@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/persistenceDTO
+END
+TldGrupo.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/persistenceDTO/TldGrupo.java
+END
+TldTarea.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/persistenceDTO/TldTarea.java
+END
+TlpFuncionalidad.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/persistenceDTO/TlpFuncionalidad.java
+END
+TlrPermiso.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/persistenceDTO/TlrPermiso.java
+END
+TlpObjetivo.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/persistenceDTO/TlpObjetivo.java
+END
+TldCategoria.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/persistenceDTO/TldCategoria.java
+END
+TldDiaNoLaborable.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/persistenceDTO/TldDiaNoLaborable.java
+END
+TldPeriodicidad.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/persistenceDTO/TldPeriodicidad.java
+END
+TlpUnidadRepeticion.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/persistenceDTO/TlpUnidadRepeticion.java
+END
+TlrUsuarioGrupo.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/persistenceDTO/TlrUsuarioGrupo.java
+END
+TlpTipoDiaNoLaborable.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/persistenceDTO/TlpTipoDiaNoLaborable.java
+END
+TldUsuario.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/persistenceDTO/TldUsuario.java
+END
+TlpAccion.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/persistenceDTO/TlpAccion.java
+END
+TlpRol.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/persistenceDTO/TlpRol.java
+END

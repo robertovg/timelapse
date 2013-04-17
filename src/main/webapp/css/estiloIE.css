@@ -1,0 +1,36 @@
+/*Caja de texto*/
+.partsContainer {
+	background:#36393D none repeat scroll 0%;
+	padding:1em;
+	margin:0px 5px 0px 0px;
+	width:90%;
+	height: 250px;
+}
+.partsContainerAzul {
+	background:#869Ce2 none repeat scroll 0%;
+	padding:1em;
+	margin:0px 5px 0px 0px;
+	width:90%;
+	height: 250px;
+}
+.partsContainerAmarillo {
+	background:#FCB854 none repeat scroll 0%;
+	padding:1em;
+	margin:0px 5px 0px 0px;
+	width:90%;
+	height: 250px;
+}
+.partsContainer .gridContainer, .partsContainerAzul .gridContainer, .partsContainerAmarillo .gridContainer {
+	background:#FFFFFF none repeat scroll 0%;
+	border-left:1px solid #000000;
+	border-top:1px solid #000000;
+	height:255px;
+}
+/*Separadores*/
+.separadorFormulario{
+	border-top: none;
+}
+/**/
+.dijitRuleLabelH{
+	left: -120px;
+}

@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<!-- Configuración por defecto -->
+	<package name="timeLapse-default" extends="struts-default">
+		<result-types>
+			<result-type name="json"
+				class="timeLapse.controller.interceptors.jsonResul.JSONResult">
+				<param name="deepSerialize">true</param>
+				<param name="out.gzip">false</param>
+				<param name="prettyPrint">false</param>
+				<param name="out.noCache">true</param>
+				<!-- <param name="patterns">-advisors.*</param> -->
+			</result-type>
+		</result-types>
+		<interceptors>
+			<interceptor name="login" class="loginInterceptor" />
+			<interceptor name="inyector" class="inyectorAtributosSession" />
+			<interceptor name="permisos" class="permissionsInterceptor"/>			
+		</interceptors>		
+		<global-results>
+			<result name="login">/jsp/container/login.jsp
+			</result>
+			<result name="login-success">/jsp/container/inicial.jsp
+			</result>
+			<result name="excepcionDescontrolada" type="json">
+				<param name="out.statusCode">500</param>
+				<param name="target">exception</param>
+				<param name="patterns">+class,+message,-*</param>
+			</result>
+			<result name="excepcionTimeLapse" type="json">
+				<param name="out.statusCode">501</param>
+				<param name="deepSerialize">true</param>
+				<param name="target">exception</param>
+				<param name="patterns">+mensajes,+class,-stackTrace</param>
+			</result>
+			<result name="input" type="json">
+				<param name="out.statusCode">502</param>
+				<param name="deepSerialize">true</param>
+				<param name="target">errors</param>
+			</result>
+			<result name="usuario-nologueado" type="httpheader">
+				<param name="error">508</param>
+  					<param name="errorMessage">El usuario no se encuentra logueado en la aplicación</param>
+			</result>
+			<result name="usuario-sinPermisos" type="httpheader">
+				<param name="error">405</param>
+  					<param name="errorMessage">El usuario no tiene permisos suficientes</param>
+			</result>			
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping exception="timeLapse.util.exceptions.TimeLapseException"
+				result="excepcionTimeLapse" />
+			<exception-mapping exception="java.lang.Exception"
+				result="excepcionDescontrolada" />
+		</global-exception-mappings>
+		<action name="*">
+		   <result type="redirectAction">
+	            <param name="actionName">index</param>
+	            <param name="namespace">/container</param>
+	        </result>		
+		</action>
+	</package>
+	<package name="conSeguridad" abstract="true" extends="timeLapse-default">
+		<interceptors>
+			<interceptor-stack name="defaultLoginStack">
+				<interceptor-ref name="exception">
+					<param name="logEnabled">true</param>
+					<param name="logCategory">timeLapse.controller.interceptors.logger.SpringLoggerInterceptor</param>
+					<param name="logLevel">debug</param>
+				</interceptor-ref>
+				<interceptor-ref name="alias" />
+				<interceptor-ref name="servletConfig" />
+				<interceptor-ref name="staticParams" />
+			 	<interceptor-ref name="params">
+		             <param name="excludeParams">dojo\..*</param>
+		        </interceptor-ref>	
+				<interceptor-ref name="prepare" />
+				<interceptor-ref name="i18n" />
+				<interceptor-ref name="login" />																
+				<interceptor-ref name="inyector" />
+				<interceptor-ref name="permisos" />
+				<interceptor-ref name="logger" />				
+				<interceptor-ref name="chain" />
+				<interceptor-ref name="debugging" />
+				<interceptor-ref name="profiling" />
+				<interceptor-ref name="scopedModelDriven" />
+				<interceptor-ref name="timer" />
+				<interceptor-ref name="modelDriven" />
+				<interceptor-ref name="fileUpload" />
+				<interceptor-ref name="checkbox" />
+				<interceptor-ref name="conversionError" />
+				<interceptor-ref name="validation">
+					<param name="excludeMethods">input,back,cancel,browse</param>
+				</interceptor-ref>
+				<interceptor-ref name="workflow">
+					<param name="excludeMethods">input,back,cancel,browse</param>
+				</interceptor-ref>
+			</interceptor-stack>					
+		</interceptors>		
+		<default-interceptor-ref name="defaultLoginStack" />	
+	</package>	
+	<package name="sinSeguridad" abstract="true" extends="timeLapse-default">
+		<interceptors>		
+			<interceptor-stack name="defaultInsecureStack">
+				<interceptor-ref name="exception">
+					<param name="logEnabled">true</param>
+					<param name="logCategory">timeLapse.controller.interceptors.logger.SpringLoggerInterceptor</param>
+					<param name="logLevel">debug</param>
+				</interceptor-ref>
+				<interceptor-ref name="alias" />
+				<interceptor-ref name="servletConfig" />				
+				<interceptor-ref name="staticParams" />
+			 	<interceptor-ref name="params">
+		             <param name="excludeParams">dojo\..*</param>
+		        </interceptor-ref>
+				<interceptor-ref name="inyector" />
+				<interceptor-ref name="prepare" />
+				<interceptor-ref name="i18n" />
+				<interceptor-ref name="logger" />
+				<interceptor-ref name="chain" />
+				<interceptor-ref name="debugging" />
+				<interceptor-ref name="profiling" />
+				<interceptor-ref name="scopedModelDriven" />
+				<interceptor-ref name="timer" />
+				<interceptor-ref name="modelDriven" />
+				<interceptor-ref name="fileUpload" />
+				<interceptor-ref name="checkbox" />
+				<interceptor-ref name="conversionError" />
+				<interceptor-ref name="validation">
+					<param name="excludeMethods">input,back,cancel,browse</param>
+				</interceptor-ref>
+				<interceptor-ref name="workflow">
+					<param name="excludeMethods">input,back,cancel,browse</param>
+				</interceptor-ref>
+			</interceptor-stack>		
+		</interceptors>
+		<default-interceptor-ref name="defaultInsecureStack" />	
+	</package>
+
+	<package name="container" extends="sinSeguridad"
+		namespace="/container">
+		<action name="cerrarSesion" class="cerraSesionAction">
+			<result>/jsp/container/login.jsp</result>
+		</action>
+		<action name="index" class="indexAction">
+			<result name="input">/jsp/container/login.jsp
+			</result>
+			<result name="success">/jsp/container/login.jsp	
+			</result>
+		</action>		
+	</package>
+	<!--
+		Actions que se encargan de cargar lo relacionado con el menu de la
+		aplicación web
+	-->
+	<package name="menu" extends="conSeguridad" namespace="/menu">		
+		<action name="objetivos" class="objetivosAction">			 		
+			<result type="json" />
+		</action>
+		<action name="funcionalidad" class="funcionalidadesAction">
+			<result type="json" />
+		</action>		
+		<!-- Action encargado de devolver el nombre usuario/Rol del Usuario Autentificado en la aplicación -->
+		<action name="usuarioRol" class="usuarioRolAction">
+			<result type="json" />
+		</action>
+	</package>	
+	<!-- Package creado para el registro en la aplicación -->
+	<package name="adminUsuarios" extends="sinSeguridad"
+		namespace="/adminUsuarios">			
+		<action name="registroAplicacion" class="registroAplicacionAction">			
+			<result type="json" />
+		</action>
+		<action name="autentificacion" class="autentificacionAction">			
+			<result type="json" />
+		</action>		
+	</package>
+	<!-- Actions dependientes del modulo de administración -->
+	<package name="administracion" extends="conSeguridad"
+		namespace="/administracion">
+		<!-- Administración de los objetivos -->
+		<action name="listaObjetivos" class="listaObjetivosAction">			
+			<param name="acciones">administracion.adminObjetivos</param>		    	
+			<result type="json" />
+		</action>
+		<action name="actualizaObjetivo" class="actualizaObjetivoAction">			
+			<param name="acciones">administracion.adminObjetivos</param>		    		
+			<result type="json" />
+		</action>
+		<action name="eliminaObjetivos" class="eliminaObjetivosAction">			
+			<param name="acciones">administracion.adminObjetivos</param>		    	
+			<result type="json" />
+		</action>
+		<!-- Administración de las funcionalidades -->
+		<action name="listaFuncionalidades" class="listaFuncionalidadesAction">			
+			<param name="acciones">administracion.adminFuncionalidades</param>		    	
+			<result type="json" />
+		</action>
+		<action name="actualizaFuncionalidad" class="actualizaFuncionalidadAction">			
+			<param name="acciones">administracion.adminFuncionalidades</param>		    	
+			<result type="json" />
+		</action>
+		<action name="eliminaFuncionalidades" class="eliminaFuncionalidadesAction">			
+			<param name="acciones">administracion.adminFuncionalidades</param>		    
+			<result type="json" />
+		</action>
+		
+		<!-- Administración de Acciones -->
+		<action name="listaAcciones" class="listaAccionesAction">		
+			<param name="acciones">administracion.adminAcciones</param>		
+			<result type="json" />
+		</action>
+		<action name="actualizaAccion" class="actualizaAccionAction">		
+			<param name="acciones">administracion.adminAcciones</param>		
+			<result type="json" />
+		</action>
+		<action name="eliminaAcciones" class="eliminaAccionesAction">
+			<param name="acciones">administracion.adminAcciones</param>
+			<result type="json" />
+		</action>		
+		<!-- Administración de los Permisos -->
+		<action name="listaRoles" class="listaRolesAction">
+			<param name="acciones">administracion.vincularRolAccion,administracion.desvincularRolAccion,categorias.vincularTareaCategoria,categorias.desvincularTareaCategoria</param>
+			<result type="json" />
+		</action>
+		<action name="listaAccionesNoAsociadas" class="listaAccionesNoAsociadasAction">
+			<param name="acciones">administracion.vincularRolAccion</param>
+			<result type="json" />
+		</action>
+		<action name="listaAccionesAsociadas" class="listaAccionesAsociadasAction">
+			<param name="acciones">administracion.desvincularRolAccion</param>
+			<result type="json" />
+		</action>
+		<action name="vinculaRolYAcciones" class="vinculaRolYAccionesAction">
+			<param name="acciones">administracion.vincularRolAccion</param>
+			<result type="json" />
+		</action>		
+		<action name="desvinculaRolYAcciones" class="desvinculaRolYAccionesAction">
+			<param name="acciones">administracion.desvincularRolAccion</param>
+			<result type="json" />
+		</action>
+		<action name="cambioPassword" class="cambioPasswordAction">
+			<param name="acciones">administracion.cambioPassword</param>
+			<result type="json" />
+		</action>
+		
+		
+	</package>
+	<!-- Actions dependientes del modulo de categorías -->
+	<package name="categorias" extends="conSeguridad"
+		namespace="/categorias">
+		<!-- Administración de los objetivos -->
+		<action name="listaCategorias" class="listaCategoriasAction">
+			<param name="acciones">categorias.adminCategorias</param>
+			<result type="json" />
+		</action>
+		<action name="actualizaCategoria" class="actualizaCategoriaAction">
+			<param name="acciones">categorias.adminCategorias</param>
+			<result type="json" />
+		</action>
+		<action name="eliminaCategorias" class="eliminaCategoriasAction">
+			<param name="acciones">categorias.adminCategorias</param>
+			<result type="json" />
+		</action>		
+		<action name="listaCategoriasUtilizadas" class="listaCategoriasUtilizadasAction">
+			<param name="acciones">tareas.adminTareas,tareas.vincularTareaTarea,tareas.desvincularTareaTarea,tiempo.vincularTareaTiempo,tiempo.desvincularTareaTiempo,grupos.vincularTareaGrupo,grupos.desvincularTareaGrupo,grupos.vincularTareaUsuario,grupos.desvincularTareaUsuario</param>
+			<result type="json" />
+		</action>
+		<action name="vinculaTareasCategoria" class="vinculaTareasCategoriaAction">
+			<param name="acciones">categorias.vincularTareaCategoria</param>
+			<result type="json" />
+		</action>
+		<action name="desvinculaTareasCategorias" class="desvinculaTareasCategoriasAction">
+			<param name="acciones">categorias.desvincularTareaCategoria</param>
+			<result type="json" />
+		</action>
+		<action name="listaCategoriasUtilizadasParaDesvincularCategorias" class="listaCategoriasUtilizadasParaDesvincularCategoriasAction">
+			<param name="acciones">categorias.desvincularTareaCategoria</param>
+			<result type="json" />
+		</action>
+		
+	</package>
+	
+	<!-- Actions dependientes del modulo de grupos -->
+	<package name="grupos" extends="conSeguridad"
+		namespace="/grupos">
+		<!-- Administración de los objetivos -->
+		<action name="listaGruposCreados" class="listaGruposCreadosAction">
+			<param name="acciones">grupos.adminGrupos,grupos.vincularUsuarioGrupo</param>				
+			<result type="json" />
+		</action>
+		<action name="listaGruposPertenecientes" class="listaGruposPertenecientesAction">
+			<param name="acciones">tareas.adminTareas,grupos.vincularTareaGrupo,grupos.desvincularTareaGrupo,grupos.desvincularUsuarioGrupo,grupos.vincularTareaUsuario,grupos.desvincularTareaUsuario</param>				
+			<result type="json" />
+		</action>		
+		<action name="actualizaGrupo" class="actualizaGrupoAction">			
+			<param name="acciones">grupos.adminGrupos</param>    
+			<result type="json" />
+		</action>
+		<action name="eliminaGrupos" class="eliminaGruposAction">	
+			<param name="acciones">grupos.adminGrupos</param>	
+			<result type="json" />
+		</action>
+		<action name="listaGruposUtilizados" class="listaGruposUtilizadosAction">
+			<param name="acciones">tareas.adminTareas,tareas.vincularTareaTarea,tareas.desvincularTareaTarea,tiempo.vincularTareaTiempo,tiempo.desvincularTareaTiempo,categorias.vincularTareaCategoria,categorias.desvincularTareaCategoria</param>
+			<result type="json" />
+		</action>
+		<action name="listaGruposUtilizadosParaDesvincularGrupos" class="listaGruposUtilizadosParaDesvincularGruposAction">
+			<param name="acciones">grupos.desvincularTareaGrupo</param>
+			<result type="json" />
+		</action>
+		<action name="vinculaTareasGrupos" class="vinculaTareasGruposAction">
+			<param name="acciones">grupos.vincularTareaGrupo</param>
+			<result type="json" />
+		</action>
+		<action name="desvinculaTareasGrupos" class="desvinculaTareasGruposAction">
+			<param name="acciones">grupos.desvincularTareaGrupo</param>
+			<result type="json" />
+		</action>
+		<action name="vinculaUsuariosGrupo" class="vinculaUsuariosGrupoAction">
+			<param name="acciones">grupos.vincularUsuarioGrupo</param>
+			<result type="json" />
+		</action>
+		<action name="desvinculaUsuariosGrupos" class="desvinculaUsuariosGruposAction">
+			<param name="acciones">grupos.desvincularUsuarioGrupo</param>
+			<result type="json" />
+		</action>		
+	</package>	
+	<package name="usuarios" extends="conSeguridad"
+		namespace="/usuarios">
+		<action name="listaUsuariosNoAsociadosAUnGrupo" class="listaUsuariosNoAsociadosAUnGrupoAction">
+			<param name="acciones">grupos.vincularUsuarioGrupo</param>
+			<result type="json" />
+		</action>
+		<action name="listaUsuariosAsociadosGrupo" class="listaUsuariosAsociadosGrupoAction">
+			<param name="acciones">grupos.desvincularUsuarioGrupo</param>
+			<result type="json" />
+		</action>
+		<action name="listaUsuariosAsociadosGrupoIncluyendoCreador" class="listaUsuariosAsociadosGrupoIncluyendoCreadorAction">
+			<param name="acciones">grupos.vincularTareaUsuario,grupos.desvincularTareaUsuario</param>
+			<result type="json" />
+		</action>
+		
+	</package>
+	<!-- Actions dependientes del modulo de Tareas -->
+	<package name="tareas" extends="conSeguridad"
+		namespace="/tareas">
+		<!-- Administración de los objetivos -->
+		<action name="listaTareas" class="listaTareasAction">
+			<param name="acciones">tareas.adminTareas</param>
+			<result type="json" />			
+		</action>
+		<action name="listaProximasTareas" class="listaProximasTareasAction">
+			<param name="acciones">tareas.adminTareas</param>
+			<result type="json" />			
+		</action>
+		<action name="listaTareasParaVincularComoPadres" class="listaTareasParaVincularComoPadresAction">
+			<param name="acciones">tareas.vincularTareaTarea</param>
+			<result type="json" />			
+		</action>		
+		<action name="actualizaTarea" class="actualizaTareaAction">
+			<param name="acciones">tareas.adminTareas</param>
+			<result type="json" />
+		</action>
+		<action name="eliminaTareas" class="eliminaTareasAction">
+			<param name="acciones">tareas.adminTareas</param>
+			<result type="json" />
+		</action>
+		<action name="clonarTarea" class="clonarTareaAction">
+			<param name="acciones">tareas.adminTareas</param>
+			<result type="json" />
+		</action>
+		<action name="finalizarTareas" class="finalizarTareasAction">
+			<param name="acciones">tareas.adminTareas</param>
+			<result type="json" />
+		</action>
+		<action name="listaTareasQueSonPadre" class="listaTareasQueSonPadreAction">
+			<param name="acciones">tareas.adminTareas,tiempo.vincularTareaTiempo,tiempo.desvincularTareaTiempo,categorias.vincularTareaCategoria,categorias.desvincularTareaCategoria,grupos.vincularTareaGrupo,grupos.desvincularTareaGrupo,grupos.vincularTareaUsuario,grupos.desvincularTareaUsuario</param>
+			<result type="json" />			
+		</action>
+		<action name="listaTareasQueSonPadreParaDesvincularTareas" class="listaTareasQueSonPadreParaDesvincularTareasAction">
+			<param name="acciones">tareas.desvincularTareaTarea</param>
+			<result type="json" />			
+		</action>		
+		<action name="listaTareasAAsociarComoPadres" class="listaTareasAAsociarComoPadresAction">			
+			<param name="acciones">tareas.adminTareas</param>
+			<result type="json" />			
+		</action>		
+		<action name="listaTareasNoAsociadasTareas" class="listaTareasNoAsociadasTareasAction">
+			<param name="acciones">tareas.vincularTareaTarea</param>
+			<result type="json" />
+		</action>		
+		<action name="listaTareasAsociadasTareas" class="listaTareasAsociadasTareasAction">
+			<param name="acciones">tareas.desvincularTareaTarea</param>
+			<result type="json" />
+		</action>
+		<action name="vinculaTareaTarea" class="vinculaTareaTareaAction">
+			<param name="acciones">tareas.vincularTareaTarea</param>
+			<result type="json" />
+		</action>
+		<action name="desvinculaTareaTarea" class="desvinculaTareaTareaAction">
+			<param name="acciones">tareas.desvincularTareaTarea</param>
+			<result type="json" />
+		</action>	
+		<action name="listaTareasNoAsociadasTiempo" class="listaTareasNoAsociadasTiempoAction">
+			<param name="acciones">tiempo.vincularTareaTiempo</param>
+			<result type="json" />
+		</action>
+		<action name="listaTareasAsociadasTiempo" class="listaTareasAsociadasTiempoAction">
+			<param name="acciones">tiempo.desvincularTareaTiempo</param>
+			<result type="json" />
+		</action>
+		<action name="listaTareasNoAsociadasCategorias" class="listaTareasNoAsociadasCategoriasAction">
+			<param name="acciones">categorias.vincularTareaCategoria</param>
+			<result type="json" />
+		</action>
+		<action name="listaTareasAsociadasCategorias" class="listaTareasAsociadasCategoriasAction">
+			<param name="acciones">categorias.desvincularTareaCategoria</param>
+			<result type="json" />
+		</action>
+		<action name="listaTareasNoAsociadasGrupos" class="listaTareasNoAsociadasGruposAction">
+			<param name="acciones">grupos.vincularTareaGrupo</param>
+			<result type="json" />
+		</action>
+		<action name="listaTareasAsociadasGrupos" class="listaTareasAsociadasGruposAction">
+			<param name="acciones">grupos.desvincularTareaGrupo</param>
+			<result type="json" />
+		</action>		
+		<action name="listaTareasDelGrupoSinAsociarUsuario" class="listaTareasDelGrupoSinAsociarUsuarioAction">
+			<param name="acciones">grupos.vincularTareaUsuario</param>
+			<result type="json" />
+		</action>
+		<action name="listaTareasDelGrupoAsociadosUsuario" class="listaTareasDelGrupoAsociadosUsuarioAction">
+			<param name="acciones">grupos.desvincularTareaUsuario</param>
+			<result type="json" />
+		</action>
+		<action name="vinculaUsuarioTareas" class="vinculaUsuarioTareasAction">
+			<param name="acciones">grupos.vincularTareaUsuario</param>
+			<result type="json" />
+		</action>
+		<action name="desvinculaUsuarioTareas" class="desvinculaUsuarioTareasAction">
+			<param name="acciones">grupos.desvincularTareaUsuario</param>
+			<result type="json" />
+		</action>
+		
+		<action name="busquedaTareas" class="busquedaTareasAction">
+			<param name="acciones">tareas.buscarTareas</param>
+			<result type="json" />
+		</action>
+				
+	</package>
+	<!-- Actions dependientes del modulo de tiempo -->
+	<package name="tiempo" extends="conSeguridad"
+		namespace="/tiempo">
+		<!-- Administración de los objetivos -->
+		<action name="vinculaTareasTiempo" class="vinculaTareasTiempoAction">
+			<param name="acciones">tiempo.vincularTareaTiempo</param>				
+			<result type="json" />
+		</action>
+		<action name="desvinculaTareasTiempo" class="desvinculaTareasTiempoAction">
+			<param name="acciones">tiempo.desvincularTareaTiempo</param>				
+			<result type="json" />
+		</action>
+	</package>
+</struts>

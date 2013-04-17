@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/timelapse-pfc/!svn/ver/40/trunk/src/main/java/timeLapse/util/exceptions
+END
+Mensaje.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/timelapse-pfc/!svn/ver/40/trunk/src/main/java/timeLapse/util/exceptions/Mensaje.java
+END
+TimeLapseException.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/timelapse-pfc/!svn/ver/3/trunk/src/main/java/timeLapse/util/exceptions/TimeLapseException.java
+END
+IFactoriaMensaje.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/timelapse-pfc/!svn/ver/3/trunk/src/main/java/timeLapse/util/exceptions/IFactoriaMensaje.java
+END
+FactoriaMensaje.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/timelapse-pfc/!svn/ver/12/trunk/src/main/java/timeLapse/util/exceptions/FactoriaMensaje.java
+END

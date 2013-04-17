@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/timelapse-pfc/!svn/ver/88/trunk/src/main/webapp/jsp/tareas
+END
+adminTareas.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/timelapse-pfc/!svn/ver/88/trunk/src/main/webapp/jsp/tareas/adminTareas.jsp
+END
+desvincularTareaTarea.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/timelapse-pfc/!svn/ver/59/trunk/src/main/webapp/jsp/tareas/desvincularTareaTarea.jsp
+END
+vincularTareaTarea.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/timelapse-pfc/!svn/ver/59/trunk/src/main/webapp/jsp/tareas/vincularTareaTarea.jsp
+END
+buscarTareas.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/timelapse-pfc/!svn/ver/88/trunk/src/main/webapp/jsp/tareas/buscarTareas.jsp
+END
+filtroTareas.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/timelapse-pfc/!svn/ver/88/trunk/src/main/webapp/jsp/tareas/filtroTareas.jsp
+END
+verProximasTareas.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/timelapse-pfc/!svn/ver/74/trunk/src/main/webapp/jsp/tareas/verProximasTareas.jsp
+END

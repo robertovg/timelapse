@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/timelapse-pfc/!svn/ver/88/trunk/src/main/webapp/jsp/grupos
+END
+desvincularTareaUsuario.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/timelapse-pfc/!svn/ver/59/trunk/src/main/webapp/jsp/grupos/desvincularTareaUsuario.jsp
+END
+desvincularUsuarioGrupo.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/timelapse-pfc/!svn/ver/59/trunk/src/main/webapp/jsp/grupos/desvincularUsuarioGrupo.jsp
+END
+adminGrupos.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/timelapse-pfc/!svn/ver/88/trunk/src/main/webapp/jsp/grupos/adminGrupos.jsp
+END
+vincularTareaUsuario.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/timelapse-pfc/!svn/ver/59/trunk/src/main/webapp/jsp/grupos/vincularTareaUsuario.jsp
+END
+vincularUsuarioGrupo.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/timelapse-pfc/!svn/ver/59/trunk/src/main/webapp/jsp/grupos/vincularUsuarioGrupo.jsp
+END
+desvincularTareaGrupo.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/timelapse-pfc/!svn/ver/59/trunk/src/main/webapp/jsp/grupos/desvincularTareaGrupo.jsp
+END
+vincularTareaGrupo.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/timelapse-pfc/!svn/ver/59/trunk/src/main/webapp/jsp/grupos/vincularTareaGrupo.jsp
+END

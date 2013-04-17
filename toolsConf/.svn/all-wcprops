@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/timelapse-pfc/!svn/ver/82/trunk/toolsConf
+END
+compile.launch
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/timelapse-pfc/!svn/ver/82/trunk/toolsConf/compile.launch
+END
+jetty run exploded.launch
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/timelapse-pfc/!svn/ver/82/trunk/toolsConf/jetty%20run%20exploded.launch
+END
+package.launch
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/timelapse-pfc/!svn/ver/82/trunk/toolsConf/package.launch
+END
+clean.launch
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/timelapse-pfc/!svn/ver/82/trunk/toolsConf/clean.launch
+END
+clean + todo.launch
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/timelapse-pfc/!svn/ver/82/trunk/toolsConf/clean%20+%20todo.launch
+END
+intall.launch
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/timelapse-pfc/!svn/ver/82/trunk/toolsConf/intall.launch
+END
+jetty run.launch
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/timelapse-pfc/!svn/ver/82/trunk/toolsConf/jetty%20run.launch
+END
+jetty stop.launch
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/timelapse-pfc/!svn/ver/82/trunk/toolsConf/jetty%20stop.launch
+END
+todo.launch
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/timelapse-pfc/!svn/ver/82/trunk/toolsConf/todo.launch
+END

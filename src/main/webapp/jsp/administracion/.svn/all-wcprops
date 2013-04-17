@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/timelapse-pfc/!svn/ver/88/trunk/src/main/webapp/jsp/administracion
+END
+registroDeLaAplicacion.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/timelapse-pfc/!svn/ver/88/trunk/src/main/webapp/jsp/administracion/registroDeLaAplicacion.jsp
+END
+desvincularRolAccion.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/timelapse-pfc/!svn/ver/59/trunk/src/main/webapp/jsp/administracion/desvincularRolAccion.jsp
+END
+adminAcciones.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/timelapse-pfc/!svn/ver/88/trunk/src/main/webapp/jsp/administracion/adminAcciones.jsp
+END
+adminObjetivos.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/timelapse-pfc/!svn/ver/88/trunk/src/main/webapp/jsp/administracion/adminObjetivos.jsp
+END
+cambioPassword.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/timelapse-pfc/!svn/ver/88/trunk/src/main/webapp/jsp/administracion/cambioPassword.jsp
+END
+vincularRolAccion.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/timelapse-pfc/!svn/ver/59/trunk/src/main/webapp/jsp/administracion/vincularRolAccion.jsp
+END
+adminFuncionalidades.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/timelapse-pfc/!svn/ver/88/trunk/src/main/webapp/jsp/administracion/adminFuncionalidades.jsp
+END

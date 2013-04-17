@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/controller/actions/categorias
+END
+ListaCategoriasUtilizadasAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/controller/actions/categorias/ListaCategoriasUtilizadasAction.java
+END
+ActualizaCategoriaAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/controller/actions/categorias/ActualizaCategoriaAction.java
+END
+ListaCategoriasAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/controller/actions/categorias/ListaCategoriasAction.java
+END
+ListaCategoriasUtilizadasParaDesvincularCategoriasAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/controller/actions/categorias/ListaCategoriasUtilizadasParaDesvincularCategoriasAction.java
+END
+DesvinculaTareasCategoriasAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/controller/actions/categorias/DesvinculaTareasCategoriasAction.java
+END
+EliminaCategoriasAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/controller/actions/categorias/EliminaCategoriasAction.java
+END
+VinculaTareasCategoriaAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/controller/actions/categorias/VinculaTareasCategoriaAction.java
+END

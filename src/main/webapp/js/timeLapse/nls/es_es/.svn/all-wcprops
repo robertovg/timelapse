@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/timelapse-pfc/!svn/ver/74/trunk/src/main/webapp/js/timeLapse/nls/es_es
+END
+desvincularUsuarioGrupo.js
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/timelapse-pfc/!svn/ver/53/trunk/src/main/webapp/js/timeLapse/nls/es_es/desvincularUsuarioGrupo.js
+END
+desvincularTareaUsuario.js
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/timelapse-pfc/!svn/ver/55/trunk/src/main/webapp/js/timeLapse/nls/es_es/desvincularTareaUsuario.js
+END
+vincularTareaUsuario.js
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/timelapse-pfc/!svn/ver/55/trunk/src/main/webapp/js/timeLapse/nls/es_es/vincularTareaUsuario.js
+END
+vincularUsuarioGrupo.js
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/timelapse-pfc/!svn/ver/53/trunk/src/main/webapp/js/timeLapse/nls/es_es/vincularUsuarioGrupo.js
+END
+desvincularTareaTarea.js
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/timelapse-pfc/!svn/ver/51/trunk/src/main/webapp/js/timeLapse/nls/es_es/desvincularTareaTarea.js
+END
+desvincularTareaGrupo.js
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/timelapse-pfc/!svn/ver/51/trunk/src/main/webapp/js/timeLapse/nls/es_es/desvincularTareaGrupo.js
+END
+desvincularRolAccion.js
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/timelapse-pfc/!svn/ver/3/trunk/src/main/webapp/js/timeLapse/nls/es_es/desvincularRolAccion.js
+END
+usuarios.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/timelapse-pfc/!svn/ver/10/trunk/src/main/webapp/js/timeLapse/nls/es_es/usuarios.js
+END
+desvincularTareaTiempo.js
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/timelapse-pfc/!svn/ver/48/trunk/src/main/webapp/js/timeLapse/nls/es_es/desvincularTareaTiempo.js
+END
+desvincularTareaCategoria.js
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/timelapse-pfc/!svn/ver/51/trunk/src/main/webapp/js/timeLapse/nls/es_es/desvincularTareaCategoria.js
+END
+vincularRolAccion.js
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/timelapse-pfc/!svn/ver/20/trunk/src/main/webapp/js/timeLapse/nls/es_es/vincularRolAccion.js
+END
+adminObjetivos.js
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/timelapse-pfc/!svn/ver/42/trunk/src/main/webapp/js/timeLapse/nls/es_es/adminObjetivos.js
+END
+cambioPassword.js
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/timelapse-pfc/!svn/ver/57/trunk/src/main/webapp/js/timeLapse/nls/es_es/cambioPassword.js
+END
+vincularTareaGrupo.js
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/timelapse-pfc/!svn/ver/51/trunk/src/main/webapp/js/timeLapse/nls/es_es/vincularTareaGrupo.js
+END
+vincularTareaTarea.js
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/timelapse-pfc/!svn/ver/51/trunk/src/main/webapp/js/timeLapse/nls/es_es/vincularTareaTarea.js
+END
+vincularTareaTiempo.js
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/timelapse-pfc/!svn/ver/51/trunk/src/main/webapp/js/timeLapse/nls/es_es/vincularTareaTiempo.js
+END
+buscarTareas.js
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/timelapse-pfc/!svn/ver/62/trunk/src/main/webapp/js/timeLapse/nls/es_es/buscarTareas.js
+END
+vincularTareaCategoria.js
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/timelapse-pfc/!svn/ver/51/trunk/src/main/webapp/js/timeLapse/nls/es_es/vincularTareaCategoria.js
+END
+adminGrupos.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/timelapse-pfc/!svn/ver/42/trunk/src/main/webapp/js/timeLapse/nls/es_es/adminGrupos.js
+END
+adminTareas.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/timelapse-pfc/!svn/ver/74/trunk/src/main/webapp/js/timeLapse/nls/es_es/adminTareas.js
+END
+adminCategorias.js
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/timelapse-pfc/!svn/ver/42/trunk/src/main/webapp/js/timeLapse/nls/es_es/adminCategorias.js
+END
+adminAcciones.js
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/timelapse-pfc/!svn/ver/42/trunk/src/main/webapp/js/timeLapse/nls/es_es/adminAcciones.js
+END
+adminFuncionalidades.js
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/timelapse-pfc/!svn/ver/42/trunk/src/main/webapp/js/timeLapse/nls/es_es/adminFuncionalidades.js
+END

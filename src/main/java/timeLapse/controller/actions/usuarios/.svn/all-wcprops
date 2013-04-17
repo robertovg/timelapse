@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/controller/actions/usuarios
+END
+ListaUsuariosAsociadosGrupoIncluyendoCreadorAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/controller/actions/usuarios/ListaUsuariosAsociadosGrupoIncluyendoCreadorAction.java
+END
+ListaUsuariosAsociadosGrupoAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/controller/actions/usuarios/ListaUsuariosAsociadosGrupoAction.java
+END
+ListaUsuariosNoAsociadosAUnGrupoAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/controller/actions/usuarios/ListaUsuariosNoAsociadosAUnGrupoAction.java
+END

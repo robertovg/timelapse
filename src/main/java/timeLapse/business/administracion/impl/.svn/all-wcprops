@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/business/administracion/impl
+END
+PermisosBO.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/business/administracion/impl/PermisosBO.java
+END
+AccionesBO.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/business/administracion/impl/AccionesBO.java
+END
+ObjetivosBO.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/business/administracion/impl/ObjetivosBO.java
+END
+RolesBO.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/business/administracion/impl/RolesBO.java
+END
+UsuarioBO.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/business/administracion/impl/UsuarioBO.java
+END
+FuncionalidadesBO.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/business/administracion/impl/FuncionalidadesBO.java
+END

@@ -1,0 +1,474 @@
+/* Sobreescritura cosas de dojo*/
+.dijitButtonContents{
+	font-size:1.1em;
+}
+.dijitDialogPaneContent{
+	float:left;
+	
+}
+div.dijitToasterContent{
+	background-color: #F2F2F2;
+   	margin: 15px;  	
+  		
+}
+.dijitToasterContainer{
+	font-size: 1em;
+	color: black;
+}
+
+.nihilo .dojoxGridHeader .dojoxGridCell {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:#E9E9E9 url(../dijit/themes/tundra/images/titleBar.png) repeat-x scroll center top;
+	border-color:transparent #ACA899 #919191 transparent;
+	border-width:1px;
+	color:#000000 !important;
+	padding-bottom:0;
+}
+.nihilo .dojoxGridHeader .dojoxGridCellOver {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:#E9E9E9 url(../dijit/themes/tundra/images/tabHover.png) repeat-x scroll center top;
+}
+
+
+#formularioPopUp, #filtroPopUp{
+	width:450px;
+	overflow: hidden;
+}
+
+
+
+/*Estructura*/
+html body {	
+    color: #2E2E2E;
+	font-size:15px;
+}
+body *{
+	padding: 0px;
+	margin: 0px;
+}
+#marco{
+	background:#36393D;
+	padding: 3px;
+}
+#preloader {
+  width:100%; height:100%; margin:0; padding:0;
+  background:#fff 
+    url('../images/loading.gif')
+    no-repeat center center;  
+  position:absolute;
+  z-index:999;
+}
+#logotipoLogin{
+	margin: 10px;
+}
+#loginPane{
+	padding-top: 10px;
+}
+#loginBody{
+	margin: 100px auto;
+	text-align: center;
+	
+}
+.divBlancoTodo{display:block}
+.divBlancoTodo *{
+  display:block;
+  height:1px;
+  overflow:hidden;
+  font-size:.01em;
+  background:#FFF}
+.divBlancoTodo1{
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;
+  border-left:1px solid #8c2622;
+  border-right:1px solid #8c2622;
+  background:#cc190f}
+.divBlancoTodo2{
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;
+  border-left:1px solid #4a3436;
+  border-right:1px solid #4a3436;
+  background:#d8160b}
+.divBlancoTodo3{
+  margin-left:1px;
+  margin-right:1px;
+  border-left:1px solid #d8160b;
+  border-right:1px solid #d8160b;}
+.divBlancoTodo4{
+  border-left:1px solid #8c2622;
+  border-right:1px solid #8c2622}
+.divBlancoTodo5{
+  border-left:1px solid #cc190f;
+  border-right:1px solid #cc190f}
+.divBlancoTodofg{
+  background:#FFF}
+
+.divRedondo500{
+	display:block;
+	width:300px;
+	margin:0px;	
+}
+.divRedondo500 *{
+  display:block;
+  height:1px;
+  overflow:hidden;
+  background:#36393D;  
+}
+
+.divRedondo300{
+	display:block;
+	padding:0px;
+	width:300px;
+	margin:auto;
+}
+.divRedondo300 *{
+  display:block;
+  height:1px;
+  overflow:hidden;
+  background:#36393D;  
+}
+
+.divRedondo1{
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;
+  border-left:1px solid #a8a9ab;
+  border-right:1px solid #a8a9ab;
+  background:#686a6d}
+.divRedondo2{
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;
+  border-left:1px solid #eaebeb;
+  border-right:1px solid #eaebeb;
+  background:#5c5e61}
+.divRedondo3{
+  margin-left:1px;
+  margin-right:1px;
+  border-left:1px solid #5c5e61;
+  border-right:1px solid #5c5e61;}
+.divRedondo4{
+  border-left:1px solid #a8a9ab;
+  border-right:1px solid #a8a9ab}
+.divRedondo5{
+  border-left:1px solid #686a6d;
+  border-right:1px solid #686a6d}
+.divRedondofg{
+  background:#36393D;
+  width:300px;
+  overflow:hidden;
+  margin:auto;
+  padding: 0px;
+  border: 0px;
+  }
+
+.blanco{
+	color:#FFFFFF;
+}
+
+.centrado{
+	text-align: center;
+}
+
+.elemFormulario{
+	
+	float: left;
+	margin-bottom:15px;
+	with: 300px;
+	display: inline;
+	clear:left;
+	width:100%;
+	
+	
+	
+}
+.cajaTexto{
+	float:left;
+	width: 100px;
+	margin:0px;
+	padding: 0px;
+	text-align: right;
+	
+}
+.labelTexto{
+	
+}
+.separadorFormulario{
+	border-style:dashed;
+	border-width:thin;
+	border-color:#2E2E2E;
+
+}
+.cajaInputChic .dijitTextBox{
+	width: 100px;
+}
+.cajaInputChic{
+	float:left;
+	width: 100px;
+	margin:0px 0px 0px 15px;
+	padding: 0px;
+	text-align: left;
+}
+.cajaInput{
+	float:left;
+	width: 150px;
+	margin:0px 0px 0px 15px;
+	padding: 0px;
+	text-align: left;
+}
+.cajaInputMed{
+	float:left;
+	width: 200px;
+	margin:0px 0px 0px 15px;
+	padding: 0px;
+	text-align: left;
+}
+.cajaInputGran{
+	float:left;
+	width: 300px;
+	margin:0px 0px 0px 15px;
+	padding: 0px;
+	text-align: left;
+}
+
+.textInput{
+	width: 120px;	
+}
+
+.cajaInputFiltro{
+	float:right;
+	width: 290px;
+	margin:4px 80px 0 15px;
+	padding: 0px;
+	text-align: left;
+}
+.cajaInputOrden{
+	float:right;
+	width: 215px;
+	margin:4px 80px 0 15px;
+	padding: 0px;
+	text-align: left;
+}
+
+
+#filtroGridContainer{	
+	background:transparent url(../images/buscar.png) no-repeat scroll 0 0 !important;
+	padding-left: 15px;
+}
+#filtroGrid{
+	
+	
+}
+#filtroTareas{
+	height:16px;
+	width:16px;
+	display:inline-block;
+}
+
+
+.contenedorBotones{
+	clear: left;
+	float:left;
+	margin:15px 0 0 15px;
+	width: 100%;
+	text-align: rigth;
+	with: 150px;
+}
+.contenedorNumericosGrid{
+	float:right;
+	margin: 0px 10px 10px 0px;
+}
+.boton{
+	
+	
+}
+
+
+a{
+	color: #AA2100;
+}
+#contenedor {
+	background-color:#FFF;
+	width: 100%;
+	height: 98%;	
+}
+#cabContenedor{
+	background-image: url("../images/fondoRallas.png");
+	background-repeat: no-repeat;
+	background-position:left top;
+	vertical-align:text-bottom;
+}
+
+#cabecera{
+	
+	background-color:#EEEEEE;	
+	height: 33px;
+	margin-top:130px;	
+	border:1px solid #2E2E2E ;
+	
+}
+#logo{
+	float:left;
+	margin:-7px 0 0 0px;
+}
+
+#iconosSuperiores{
+	float:right;
+	margin-top:70px;
+}
+
+#inicio{
+	height:50px;
+	width:55px;
+	display:inline-block;
+	background-image:url(../images/inicioCon.png);
+		
+}
+#inicio:hover{
+	background-image:url(../images/inicioSin.png);
+}
+#ayuda{
+	height:50px;
+	width:55px;
+	display:inline-block;
+	background-image:url(../images/ayudaCon.png);	
+}
+#ayuda:hover{
+	background-image:url(../images/ayudaSin.png);
+}
+
+
+#salir{
+	height:50px;
+	width:55px;
+	display:inline-block;
+	background-image:url(../images/salirCon.png);	
+}
+#salir:hover{
+	background-image:url(../images/salirSin.png);
+}
+#pie{
+	color:#36393D;
+	background: #EEEEEE no-repeat scroll 0%;	
+	
+	height: 25px;	
+	border:1px solid #2E2E2E ;
+	
+}
+#cabMenuLateral{
+	background:#fff;
+	width: 20%;
+	overflow: hidden;
+}
+#menuLateral{
+	
+	
+	
+}
+#cabPrincipal{
+	background-color:#fff;
+	overflow: hidden;
+}
+#principal{
+	margin: 5px;
+	overflow:hidden;
+}
+
+
+#tituloPie{
+	float:right;
+	margin-right: 10px;
+	
+}
+#progress{
+	visibility:hidden;
+	width:300px;
+	float:left;
+}
+/*Contenidos*/
+.partsContainer {
+	background:#36393D none repeat scroll 0%;
+	padding:1em;
+	margin:0px 5px 0px 0px;
+	width:90%;
+}
+.partsContainerAzul {
+	background:#869Ce2 none repeat scroll 0%;
+	padding:1em;
+	margin:0px 5px 0px 0px;
+	width:90%;
+}
+.partsContainerAmarillo {
+	background:#FCB854 none repeat scroll 0%;
+	padding:1em;
+	margin:0px 5px 0px 0px;
+	width:90%;
+}
+.partsContainer .gridContainer, .partsContainerAzul .gridContainer, .partsContainerAmarillo .gridContainer {
+	background:#FFFFFF none repeat scroll 0%;
+	border-left:1px solid #000000;
+	border-top:1px solid #000000;
+	height:68%;
+}
+.divNegro{
+	background:#36393D none repeat scroll 0%;	
+	width:300px;
+	margin:0px;
+}
+.divNegro h1{
+	
+	color:#FFFFFF;
+	margin:0px 0px 0px 15px;
+}
+.dojoxGrid-row-odd td {
+	background:#E8F2FF none repeat scroll 0%;
+}
+.popUp{
+	with:450px;
+}
+.infos{
+	color: #356AA0;
+}
+.errores{
+	color: #D01F3C;
+}
+.divisionIzquierda{
+	float:left;
+	width: 45%;
+	height: 90%;
+	margin: 5px;
+}
+.divisionDerecha{
+	float:right;
+	width: 45%;
+	height: 90%;
+	margin: 5px;
+}
+.letraGrande{
+	font-size: 1.5em;
+}
+.cajaInputHora{
+	float:right;	
+	margin:0 10% 0 15px;
+	padding: 0px;
+	text-align: left;
+}
+.cajaInputFecha{
+	float:left;	
+	margin:0px 0px 0px 15px;
+	padding: 0px;
+	text-align: left;
+	widows: 100px;
+}
+.cajaInputFecha .dijitTextBox{
+	width: 100px;
+}

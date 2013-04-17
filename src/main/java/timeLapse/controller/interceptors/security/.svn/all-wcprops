@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/timelapse-pfc/!svn/ver/79/trunk/src/main/java/timeLapse/controller/interceptors/security
+END
+LoginInterceptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/timelapse-pfc/!svn/ver/79/trunk/src/main/java/timeLapse/controller/interceptors/security/LoginInterceptor.java
+END
+PermissionsInterceptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/timelapse-pfc/!svn/ver/79/trunk/src/main/java/timeLapse/controller/interceptors/security/PermissionsInterceptor.java
+END

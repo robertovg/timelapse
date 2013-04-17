@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/dao/impl
+END
+AccionDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/dao/impl/AccionDAO.java
+END
+GrupoDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/dao/impl/GrupoDAO.java
+END
+TareaDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/dao/impl/TareaDAO.java
+END
+CategoriaDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/dao/impl/CategoriaDAO.java
+END
+FuncionalidadDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/dao/impl/FuncionalidadDAO.java
+END
+ObjetivoDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/dao/impl/ObjetivoDAO.java
+END
+PermisosDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/dao/impl/PermisosDAO.java
+END
+RolesDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/dao/impl/RolesDAO.java
+END
+UsuarioGrupoDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/dao/impl/UsuarioGrupoDAO.java
+END
+UsuarioDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources/dao/impl/UsuarioDAO.java
+END

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/timelapse-pfc/!svn/ver/97/trunk/src/main/resources
+END
+struts.properties
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/timelapse-pfc/!svn/ver/20/trunk/src/main/resources/struts.properties
+END
+webdefault.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/timelapse-pfc/!svn/ver/23/trunk/src/main/resources/webdefault.xml
+END
+struts.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/timelapse-pfc/!svn/ver/66/trunk/src/main/resources/struts.xml
+END
+hibernate.reveng.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/timelapse-pfc/!svn/ver/34/trunk/src/main/resources/hibernate.reveng.xml
+END
+applicationContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/timelapse-pfc/!svn/ver/20/trunk/src/main/resources/applicationContext.xml
+END
+hibernate.cfg.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/timelapse-pfc/!svn/ver/34/trunk/src/main/resources/hibernate.cfg.xml
+END
+log4j.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/timelapse-pfc/!svn/ver/20/trunk/src/main/resources/log4j.xml
+END

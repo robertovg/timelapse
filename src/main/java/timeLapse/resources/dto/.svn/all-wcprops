@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/resources/dto
+END
+TareaDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/resources/dto/TareaDTO.java
+END
+FiltroTareasDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/resources/dto/FiltroTareasDTO.java
+END
+FechaDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/resources/dto/FechaDTO.java
+END
+UsuarioDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/timelapse-pfc/!svn/ver/99/trunk/src/main/java/timeLapse/resources/dto/UsuarioDTO.java
+END
